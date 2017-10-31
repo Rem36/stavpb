@@ -1,0 +1,17 @@
+{% load staticfiles %} <!-- Подключение основной css таблицы -->
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link type="text/css" href="{% static 'generalapp/style.css' %}" rel='stylesheet'>
+			{% block additional_css %}{% endblock %} <!-- Подключение доп css стилей -->
+			{% block additional_js %}{% endblock %} <!-- Подключение доп js скриптов -->
+		<title>{% block title %}Stav-PB{% endblock %}</title>
+	</head>
+	<body>
+		<div class="content">
+			{% block content %}
+			{% endblock %}
+		</div>
+	</body>
+</html>

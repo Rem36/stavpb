@@ -1,0 +1,15 @@
+
+<html>
+<head>
+<title></title>
+<body>
+<form action="{% url 'generalapp:post_add' %}" method="post">
+{% csrf_token %}
+{{ form.otd }}
+{{ form.fio}}
+{{ form.text}}
+<div class="submit-button"><input type="submit" value="Отправить"></div>
+</form>
+</body>
+</head>
+</html>

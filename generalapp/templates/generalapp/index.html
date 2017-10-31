@@ -1,0 +1,14 @@
+{% extends 'generalapp/base.html' %}
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+
+	<p><a href="{% url 'generalapp:post_add' %}">form</a></p>
+		{% for post in posts %}
+			<p><a href="{% url 'generalapp:show_post' post.id %}">{{ post.otd }}</a></p>
+		{% endfor %}
+
+
+
+
+{% endblock %}
